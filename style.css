@@ -1,0 +1,129 @@
+:root {
+    --main-bg-color: #f4f4f4;
+    --header-bg-color: #333;
+    --header-text-color: white;
+    --accent-color: #ff6347;
+    --secondary-color: #4682b4;
+    --triangle-color: #32cd32;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Arial', sans-serif;
+    --max-width: 800px;
+    --circle-size: 100px;
+    --square-size: 80px;
+    --triangle-border-size: 60px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    max-width: var(--max-width);
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+h1, h2 {
+    color: var(--header-bg-color);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 15px var(--shadow-color);
+}
+
+.circle {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+}
+
+.square {
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    z-index: -1;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: var(--triangle-border-size) solid transparent;
+    border-right: var(--triangle-border-size) solid transparent;
+    border-bottom: calc(var(--triangle-border-size) * 2) solid var(--triangle-color);
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
